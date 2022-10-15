@@ -1,6 +1,7 @@
 var bstack: stack<bit8>
 var btemp: bit8
 var bloop: bit8
+var bcode: []char
 
 func main()
     do @greet()
@@ -17,5 +18,12 @@ end func
 func listen()
     while(true)
         cui@print("\n> ")
+        do @bcode :: cui@input()
+        if(@bcode = "quit")
+            cui@print("Bye!\n")
+            break
+        end if
+        ;parse(@bcode)
     end while
+
 end func
