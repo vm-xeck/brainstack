@@ -33,8 +33,30 @@ func listen()
                 do @btemploop[@bcurrent] :+ 1b8
             case '-'
                 do @btemploop[@bcurrent] :- 1b8
+            case '.'
+                do @bstack.add(@btemploop[0])
+            case ','
+                do @btemploop[0] :: @bstack.get()
+            case '*'
+                do @btemploop[0] :: 0b8
+            case '>'
+                do @bcurrent :: (@bcurrent + 1) % 2
+            case '['
+                if(@btemploop[1] = 0)
+                    while(bcode[i] <> ']')
+                        do i :+ 1
+                    end while
+                end if
+            case ']'
+                while(bcode[i] <> '[')
+                    do i :- 1
+                end while
+                do i :- 1
             case 'p'
                 do cui@print("\{@btemploop[@bcurrent] $ char}\n")
+            case 'r'
+                do cui@print("input: ")
+                do @btemploop[bcurrent] :: cui@input()
             end switch
         end for
     end func
