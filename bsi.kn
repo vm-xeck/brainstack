@@ -13,7 +13,7 @@ func greet()
     do cui@print("Type \"quit\" to quiti\n")
     do @bstack :: #stack<bit8>
     do @btemploop :: #[2]bit8
-    do @current :: 0b8
+    do @bcurrent :: 0b8
 end func
 
 func listen()
