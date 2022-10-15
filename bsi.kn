@@ -42,7 +42,7 @@ func listen()
             case '>'
                 do @bcurrent :: (@bcurrent + 1) % 2
             case '['
-                if(@btemploop[1] = 0)
+                if(@btemploop[1] = 0b8)
                     while(bcode[i] <> ']')
                         do i :+ 1
                     end while
@@ -55,8 +55,9 @@ func listen()
             case 'p'
                 do cui@print("\{@btemploop[@bcurrent] $ char}\n")
             case 'r'
+                var casted: bool
                 do cui@print("input: ")
-                do @btemploop[@bcurrent] :: cui@input()
+                do @btemploop[@bcurrent] :: cui@input().toInt(&casted) $ bit8
             end switch
         end for
     end func
