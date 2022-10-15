@@ -4,11 +4,18 @@ var bloop: bit8
 
 func main()
     do @greet()
-    
+    do @listen()
 end func
 
 func greet()
-    do cui@print("Welcome to Brainstack interpreter!\n")
+    do cui@print("\nWelcome to Brainstack interpreter!\n")
+    do cui@print("Type \"quit\" to quiti\n")
     do @bstack :: #stack<bit8>
     do @btemp :: 0b8
+end func
+
+func listen()
+    while(true)
+        cui@print("\n> ")
+    end while
 end func
