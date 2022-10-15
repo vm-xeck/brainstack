@@ -1,8 +1,8 @@
 # Brainstack - a Brainf*ck based stack-oriented language
 
 ## 概要
-Brainstackは，配列の替わりにスタックを使用するBrainf*ckです．
-Brainf*ckで用いられる記号のうち`[`, `]`, `+`, `-`を拝借し，`.`, `,`, `>`を異なる命令として採用した他`p`, `w`, `*`を新たに追加しました．
+Brainstackは，配列の替わりにスタックを使用するBrainf\*ckです．
+Brainf\*ckで用いられる記号のうち`[`, `]`, `+`, `-`を拝借し，`.`, `,`, `>`を異なる命令として採用した他`p`, `w`, `*`を新たに追加しました．
 
 ## 仕様
 Brainstackのコードは`Stack`, `Loop`バイト, `Temp`バイトを操作することになります．
