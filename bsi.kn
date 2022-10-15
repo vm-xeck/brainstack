@@ -17,7 +17,7 @@ end func
 
 func listen()
     while wait(true)
-        cui@print("\n> ")
+        do cui@print("\n> ")
         do @bcode :: cui@input()
         if(@bcode = "quit")
             cui@print("Bye!\n")
