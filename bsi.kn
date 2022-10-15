@@ -32,6 +32,7 @@ func listen()
             switch(bcode[0])
             case '+'
                 do cui@print("add\n")
+            end switch
         end for
     end func
 end func
