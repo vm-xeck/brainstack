@@ -18,7 +18,7 @@ end func
 
 func listen()
     while wait(true)
-        do cui@print("\n> ")
+        do cui@print("\nbsi: ")
         do @bcode :: cui@input()
         if(@bcode = "quit")
             do cui@print("Bye!\n\n")
@@ -56,7 +56,7 @@ func listen()
                 do cui@print("\{@btemploop[@bcurrent] $ int $ char}\n")
             case 'r'
                 var casted: bool
-                do cui@print("input: ")
+                do cui@print("-input: ")
                 do @btemploop[@bcurrent] :: cui@input().toInt(&casted) $ bit8
             end switch
         end for
