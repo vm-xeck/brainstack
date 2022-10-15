@@ -20,7 +20,7 @@ func listen()
         do cui@print("\n> ")
         do @bcode :: cui@input()
         if(@bcode = "quit")
-            do cui@print("Bye!\n")
+            do cui@print("Bye!\n\n")
             break wait
         end if
         ;parse(@bcode)
