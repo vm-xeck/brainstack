@@ -1,6 +1,6 @@
 var bstack: stack<bit8>
 var btemploop: []bit8
-var bcurrent: bit8
+var bcurrent: int
 var bcode: []char
 
 func main()
@@ -13,7 +13,7 @@ func greet()
     do cui@print("Type \"quit\" to quiti\n")
     do @bstack :: #stack<bit8>
     do @btemploop :: #[2]bit8
-    do @bcurrent :: 0b8
+    do @bcurrent :: 0
 end func
 
 func listen()
@@ -30,7 +30,11 @@ func listen()
         for i(0, ^bcode - 1)
             switch(bcode[i])
             case '+'
-                do cui@print("add\n")
+                do @btemploop[@bcurrent] :+ 1b8
+            case '-'
+                do @btemploop[@bcurrent] :- 1b8
+            case 'p'
+                do cui@print("\{@btemploop[@bcurrent] $ char}\n")
             end switch
         end for
     end func
