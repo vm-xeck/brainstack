@@ -1,0 +1,7 @@
+func main()
+    do @greet()
+end func
+
+func greet()
+    do cui@print("Welcome to Brainstack interpreter!\n")
+end func
