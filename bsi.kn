@@ -28,7 +28,7 @@ func listen()
     end while
     func parse(bcode: []char)
         for i(0, ^bcode - 1)
-            switch(bcode[0])
+            switch(bcode[i])
             case '+'
                 do cui@print("add\n")
             end switch
