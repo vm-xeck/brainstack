@@ -21,7 +21,7 @@ func listen()
         do @bcode :: cui@input()
         if(@bcode = "quit")
             cui@print("Bye!\n")
-            break
+            break while
         end if
         ;parse(@bcode)
     end while
