@@ -56,7 +56,7 @@ func listen()
                 do cui@print("\{@btemploop[@bcurrent] $ char}\n")
             case 'r'
                 do cui@print("input: ")
-                do @btemploop[bcurrent] :: cui@input()
+                do @btemploop[@bcurrent] :: cui@input()
             end switch
         end for
     end func
