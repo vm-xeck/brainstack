@@ -16,12 +16,12 @@ func greet()
 end func
 
 func listen()
-    while(true)
+    while wait(true)
         cui@print("\n> ")
         do @bcode :: cui@input()
         if(@bcode = "quit")
             cui@print("Bye!\n")
-            break while
+            break wait
         end if
         ;parse(@bcode)
     end while
