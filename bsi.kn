@@ -24,7 +24,7 @@ func listen()
             do cui@print("Bye!\n\n")
             break wait
         end if
-        parse(@bcode)
+        do parse(@bcode)
     end while
     func parse(bcode: []char)
         for i(0, ^bcode - 1)
