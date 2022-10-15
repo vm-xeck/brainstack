@@ -53,7 +53,7 @@ func listen()
                 end while
                 do i :- 1
             case 'p'
-                do cui@print("\{@btemploop[@bcurrent] $ char}\n")
+                do cui@print("\{@btemploop[@bcurrent] $ int $ char}\n")
             case 'r'
                 var casted: bool
                 do cui@print("input: ")
