@@ -1,7 +1,6 @@
 var bstack: stack<bit8>
-var btemp: bit8
-var bloop: bit8
-var current: &bit8
+var btemploop: []bit8
+var bcurrent: bit8
 var bcode: []char
 
 func main()
@@ -13,8 +12,8 @@ func greet()
     do cui@print("\nWelcome to Brainstack interpreter!\n")
     do cui@print("Type \"quit\" to quiti\n")
     do @bstack :: #stack<bit8>
-    do @btemp :: 0b8
-    do @current :: &@btemp
+    do @btemploop :: #[2]bit8
+    do @current :: 0b8
 end func
 
 func listen()
