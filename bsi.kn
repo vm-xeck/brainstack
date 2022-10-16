@@ -27,6 +27,7 @@ func listen()
         do parse(@bcode)
     end while
     func parse(bcode: []char)
+        var output: []char :: "\0"
         for i(0, ^bcode - 1)
             switch(bcode[i])
             case '+'
@@ -53,12 +54,22 @@ func listen()
                 end while
                 do i :- 1
             case 'p'
-                do cui@print("\{@btemploop[@bcurrent] $ int $ char}\n")
+                do output :: output ~ (@btemploop[@bcurrent] $ int $ char).toStr()
             case 'r'
                 var casted: bool
                 do cui@print("-input: ")
                 do @btemploop[@bcurrent] :: cui@input().toInt(&casted) $ bit8
+            case 'c'
+                if(@bcurrent = 0)
+                    do cui@print("-current: Temp\n")
+                else
+                    do cui@print("-current: Loop\n")
+                end if
             end switch
         end for
+        if(^output > 1)
+            do output :: output ~ "\n"
+        end if
+        do cui@print("\{output}")
     end func
 end func
