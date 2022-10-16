@@ -27,7 +27,7 @@ func listen()
         do parse(@bcode)
     end while
     func parse(bcode: []char)
-        var output: []char :: "\0"
+        var output: []char :: " "
         for i(0, ^bcode - 1)
             switch(bcode[i])
             case '+'
