@@ -68,7 +68,7 @@ func listen()
             end switch
         end for
         if(^output > 1)
-            do output :: ("-output" ~ output ~ "\n").trimLeft()
+            do output :: ("-output: " ~ output ~ "\n").trimLeft()
         end if
         do cui@print("\{output}")
     end func
